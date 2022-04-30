@@ -62,31 +62,31 @@ $(document).ready(function () {
 });
 
 // slider-testimonials 
-  // const sliders = document.querySelector(".slide__testimonials");
-  // const slider = document.querySelectorAll(".select__item");
-  // const item = document.querySelector(".select__item");
-  // const sliderDot = document.querySelectorAll(".slider__dot__item")
-  // const sliderLength = slider.length;
-  // const setWith = item.offsetWidth;
-  // let index = 0;
-  // setInterval(function(){
-  //   index++;
-  //   if(index === sliderLength) {
-  //     index = 0
-  //   }
-  //   sliders.style = `transform : translateX(${index * setWith * -1}px)`;
-  //   [...sliderDot].forEach(item => item.addEventListener("click", function(e){
-  //     [...sliderDot].forEach(para => para.classList.remove("active"));
-  //     e.target.classList.add("active");
+  const sliders = document.querySelector(".slide__testimonials");
+  const slider = document.querySelectorAll(".select__item");
+  const item = document.querySelector(".select__item");
+  const sliderDot = document.querySelectorAll(".slider__dot__item")
+  const sliderLength = slider.length;
+  const setWith = item.offsetWidth;
+  let index = 0;
+  setInterval(function(){
+    index++;
+    if(index === sliderLength) {
+      index = 0
+    }
+    sliders.style = `transform : translateX(${index * setWith * -1}px)`;
+    [...sliderDot].forEach(item => item.addEventListener("click", function(e){
+      [...sliderDot].forEach(para => para.classList.remove("active"));
+      e.target.classList.add("active");
 
-  //     const sliderIndex = parseInt(e.target.dataset.index);
-  //     index = sliderIndex;
-  //     console.log(index);
-  //     sliders.style = `transform : translateX(${index * setWith * -1}px)`;
-  //   }));
-  //   [...sliderDot].forEach(para => para.classList.remove("active"));
-  //   sliderDot[index].classList.add("active");
-  // },3000)
+      const sliderIndex = parseInt(e.target.dataset.index);
+      index = sliderIndex;
+      console.log(index);
+      sliders.style = `transform : translateX(${index * setWith * -1}px)`;
+    }));
+    [...sliderDot].forEach(para => para.classList.remove("active"));
+    sliderDot[index].classList.add("active");
+  },3000)
 
 
 //menuMobi
@@ -95,9 +95,9 @@ const menuMobile = document.querySelector(".bar__menu")
 const childMenu = document.querySelector(".nav__menu-mobile")
 const header = document.querySelector(".navigation")
 const overLay = document.querySelector(".overlay")
-// const dropMenuone = document.querySelector(".mobile-drop__menu1")
-// const menuChildone = document.querySelector(".menu__mobi__child1")
-const barMenu = document.querySelector(".hand-menu")
+const dropMenuone = document.querySelector(".mobile-drop__menu1")
+const menuChildone = document.querySelector(".menu__mobi__child1")
+const barMenu = document.querySelector(".hald-menu")
 const menuMobi = document.querySelector(".navigation")
 
 
@@ -114,21 +114,12 @@ overLay.addEventListener("click",() => {
 
 
 
-// dropMenuone.addEventListener("click", () => {
-//   menuChildone.classList.toggle("changmenu__child");
+dropMenuone.addEventListener("click", () => {
+  console.log("hihi");
+  menuChildone.classList.toggle("changmenu__child");
+  console.log( barMenu);
 
-//   var heightMobile = childMenu.clientHeight;
-//   console.log(heightMobile);
+  barMenu.classList.toggle("change-hight");
 
-//   var isClose = childMenu.clientHeight === heightMobile;
-//   if(isClose) {
-//     childMenu.style.height = '600px';
-//   } 
-//   else {
-//     // childMenu.style.removeProperty("height")
-//     childMenu.removeAttribute("style");
-
-//   }
-
-// })
+})
 

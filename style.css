@@ -656,7 +656,7 @@ body{
 
 .hand-menu {
     height: 300px;
-    transition: 2s all ease;
+    transition: 1s all ease;
     opacity: 1;
 }
 .root {
@@ -693,13 +693,9 @@ body{
 
 
 
-
-
-
-
-
-
-
+.change-hight {
+    height: 520px !important;
+}
 
 
 .menumobi__child2,.menumobi__child1 {
